@@ -10,7 +10,7 @@ seq 9 | sed 'H;g' | awk -v RS='' '{for(i=1;i<=NF;i++)printf("%dx%d=%d%s", i, NR,
 # To specify an output separator character:
 printf '1 2 3' | awk 'BEGIN {OFS=":"}; {print $1,$2,$3}'
 
-# To execute commands only on rows that satisfy a certain condtion
+# To execute commands only on rows that satisfy a certain condition
 printf "george jetson\nolive oyl\nbeetle bailey" | awk '$2=="bailey"{print $0}'
 #
 # To execute commands only on matching rows using regex
